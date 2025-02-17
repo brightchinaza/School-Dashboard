@@ -1,12 +1,10 @@
 import Announcements from "@/components/Announcements";
 import BigCalendar from "@/components/BigCalender";
-import FormModal from "@/components/FormModal";
 import Performance from "@/components/Performance";
-import { table } from "console";
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleTeacherPage = () => {
+const SingleStudentPage = () => {
   return (
     <div className="flex-1 p-4 flex flex-col gap-4 xl:flex-row">
       {/* LEFT */}
@@ -18,7 +16,7 @@ const SingleTeacherPage = () => {
           <div className="bg-lamaSky py-6 px-4 rounded-md flex-1 flex gap-4">
             <div className="w-1/3">
               <Image
-                src="https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt=""
                 width={144}
                 height={144}
@@ -26,28 +24,7 @@ const SingleTeacherPage = () => {
               />
             </div>
             <div className="w-1/3 flex-1 justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <h1 className=" text-xl font-semibold">Bright Eluno</h1>
-                <FormModal
-                  table="teacher"
-                  type="update"
-                  data={{
-                    id: 1,
-                    username: "Bright Eluno",
-                    email: "user@gmail.com",
-                    password: "password",
-                    firstName: "Bright ",
-                    lastName: "Eluno",
-                    phone: "+1234567890",
-                    address: "123 Main St, City, State, ZIP",
-                    bloodType: "A+",
-                    birthday: "03/23/2005",
-                    sex: "male",
-                    img:
-                      "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
-                  }}
-                />
-              </div>
+              <h1 className=" text-xl font-semibold">Favour Eluno</h1>
               <p className=" text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur wertg.
               </p>
@@ -98,8 +75,8 @@ const SingleTeacherPage = () => {
                 className="w-6 h-6"
               />
               <div className="">
-                <h1 className="text-xl font-semibold">2</h1>
-                <span className="text-sm text-gray-400">Branches</span>
+                <h1 className="text-xl font-semibold">6th</h1>
+                <span className="text-sm text-gray-400">grade</span>
               </div>
             </div>
 
@@ -113,7 +90,7 @@ const SingleTeacherPage = () => {
                 className="w-6 h-6"
               />
               <div className="">
-                <h1 className="text-xl font-semibold">6</h1>
+                <h1 className="text-xl font-semibold">18</h1>
                 <span className="text-sm text-gray-400">Lessons</span>
               </div>
             </div>
@@ -128,15 +105,15 @@ const SingleTeacherPage = () => {
                 className="w-6 h-6"
               />
               <div className="">
-                <h1 className="text-xl font-semibold">6</h1>
-                <span className="text-sm text-gray-400">Classes</span>
+                <h1 className="text-xl font-semibold">6A</h1>
+                <span className="text-sm text-gray-400">Class</span>
               </div>
             </div>
           </div>
         </div>
         {/* BOTTOM  */}
         <div className=" mt-4 bg-white rounded-md p-4 h-[800px] ">
-          <h1>Teacher&apos;s Schedule </h1>
+          <h1>Student&apos;s Schedule </h1>
           <BigCalendar />
         </div>
       </div>
@@ -147,19 +124,19 @@ const SingleTeacherPage = () => {
           <h1 className="text-xl font-semibold ">Shortcuts</h1>
           <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
             <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">
-              Teacher&apos;s Classes
+              Student&apos;s Classes
             </Link>
             <Link className="p-3 rounded-md bg-lamaPurpleLight" href="/">
-              Teacher&apos;s Students
-            </Link>
-            <Link className="p-3 rounded-md bg-lamaYellowLight" href="/">
-              Teacher&apos;s Lessons
+              Student&apos;s Teachers
             </Link>
             <Link className="p-3 rounded-md bg-pink-50" href="/">
-              Teacher&apos;s Exams
+              Student&apos;s Exams
             </Link>
             <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">
-              Teacher&apos;s Assignments
+              Student&apos;s Assignments
+            </Link>
+            <Link className="p-3 rounded-md bg-lamaYellowLight" href="/">
+              Student&apos;s Results
             </Link>
           </div>
         </div>
@@ -170,4 +147,4 @@ const SingleTeacherPage = () => {
   );
 };
 
-export default SingleTeacherPage;
+export default SingleStudentPage;
